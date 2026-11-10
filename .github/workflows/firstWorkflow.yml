@@ -1,0 +1,16 @@
+
+# Name of the workflow
+name: First Workflow
+
+# Trigger the workflow manually
+on:
+  workflow_dispatch:
+
+# Define jobs
+jobs:
+  first-job:
+    runs-on: macos-latest
+
+    steps:
+      - name: Print greeting
+        run: echo "hello world"
