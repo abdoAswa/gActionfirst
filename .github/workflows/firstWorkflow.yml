@@ -1,16 +1,20 @@
 
-# Name of the workflow
-name: First Workflow
+name: My First GitHub Action
 
-# Trigger the workflow manually
 on:
+  push:
   workflow_dispatch:
 
-# Define jobs
 jobs:
-  first-job:
-    runs-on: macos-latest
+  hello-world:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Print greeting
-        run: echo "hello world"
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Show Current Directory
+        run: pwd
+
+      - name: Show Files
+        run: ls -la
